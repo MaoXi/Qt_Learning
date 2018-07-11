@@ -29,3 +29,10 @@ void Form::on_pushButton_clicked()
     QString filename=QFileDialog::getOpenFileName(this,"open","/","files(*)");
     ui->lineEdit->setText(filename);
 }
+
+void Form::on_pushButton_2_clicked()
+{
+   this->close();
+    ui->lineEdit->clear();
+   // tabWidget->setCurrentIndex(2);
+}

@@ -5,6 +5,7 @@
 
 #include <QWidget>
 #include"ui_form.h"
+
 /*
 namespace Ui {
 class Form;
@@ -27,8 +28,11 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::Form *ui;
+
 };
 
 //#endif // WIDGET_H
