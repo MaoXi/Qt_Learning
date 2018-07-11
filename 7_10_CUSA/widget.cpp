@@ -5,6 +5,7 @@ Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
 {
+
     ui->setupUi(this);
     ui->tabWidget->setCurrentIndex(0);
     QWidget *widget1 = new QWidget;
@@ -28,6 +29,8 @@ void Widget::changeEvent(QEvent *e)
     }
 }
 
+
+
 void Widget::on_pushButton_2_clicked()
 {
     ui->tabWidget->setCurrentIndex(1);
@@ -44,4 +47,14 @@ void Widget::on_spinBox_editingFinished()
     {
         ui->comboBox->addItem(QString::number(i));
     }
+}
+
+void Widget::on_pushButton_7_clicked()
+{
+     ui->tabWidget->setCurrentIndex(2);
+}
+
+void Widget::on_pushButton_clicked()
+{
+    form.show();
 }

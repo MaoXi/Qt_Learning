@@ -2,6 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include"form.h"
 
 namespace Ui {
 class Widget;
@@ -25,8 +26,13 @@ private slots:
 
     void on_spinBox_editingFinished();
 
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_clicked();
+
 private:
     Ui::Widget *ui;
+    Form form;
 };
 
 #endif // WIDGET_H
