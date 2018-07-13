@@ -1,0 +1,14 @@
+绘图使用了QCustomPlot这个插件，官方下载地址:http://www.qcustomplot.com/index.php/download
+下载之后将文件解压到任意一个文件夹中，不要有中文路径。
+
+1、打开QT，新建一个窗体工程
+     将解压得到的文件夹里面的头文件qcustomplot.h和源文件qcustomplot.cpp复制粘贴到工程文件夹下。
+
+2、在Qt中，对着工程名右键，添加已有文件，将头文件qcustomplot.h和源文件qcustomplot.cpp都添加到工程中来。
+      接着在工程的pro文件的第9行末尾加入代 printsupport
+
+3、打开界面文件，进入图形化设计界面，向主窗口中添加一个widget区域，对着所添加的widget区域点击右键，选择“提升为”按钮。
+     提升类名称输入“QCustomPlot”，点击添加。
+     在之后的界面中选中QCustomPlot，点击提升按钮，我们创建的widget就被提升为QCustomPlot类了。
+
+运行一下程序，就会出现一个简单的坐标系了
