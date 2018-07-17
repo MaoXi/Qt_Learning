@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include"form.h"
+#include"juzhen.h"
 
 namespace Ui {
 class Widget;
@@ -30,9 +31,22 @@ private slots:
 
     void on_pushButton_clicked();
 
+
+    void on_pushButton_4_clicked();
+
+    void on_comboBox_currentIndexChanged(const QString &arg1);
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_6_clicked();
+
+
+    void on_pushButton_3_clicked();
+
 private:
     Ui::Widget *ui;
     Form form;
+    Juzhen juzhen;
 };
 
 #endif // WIDGET_H

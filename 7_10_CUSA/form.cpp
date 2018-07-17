@@ -1,5 +1,4 @@
-﻿
-#include"form.h"
+﻿#include"form.h"
 #include"QFileDialog"
 Form::Form(QWidget *parent) : QWidget(parent)
 

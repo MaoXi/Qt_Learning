@@ -1,11 +1,10 @@
-﻿#include "widget.h"
+#include "mainwindow.h"
 #include <QApplication>
-#include"QStyleFactory"
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-     a.setStyle(QStyleFactory::create("fusion"));
-    Widget w;
+    MainWindow w;
     w.show();
 
     return a.exec();
