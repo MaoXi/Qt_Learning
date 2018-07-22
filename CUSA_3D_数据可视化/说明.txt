@@ -1,0 +1,14 @@
+需要安装QtDataVisualization模块，数据可视化方面已出版教程没有涉及，
+网上相关资料极其少，最好的办法是看Qt官方文档和示例。
+
+1、（推荐方法）
+        在Qt自带Maintenance tool更新或安装组件：
+        点击添加或更新组件，会提示没有存储库，点击
+        设置，添加临时存储库。
+        可以添加这个网址：
+http://mirrors.ustc.edu.cn/qtproject/online/qtsdkrepository/windows_x86/root/qt/
+   
+     
+2、
+        在官网下载相应模块自行手动配置Orz
+        http://download.qt.io/archive/qt/5.7/5.7.1/submodules/

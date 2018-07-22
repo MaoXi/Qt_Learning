@@ -43,6 +43,16 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_spinBox_2_editingFinished();
+
+    void on_comboBox_4_currentIndexChanged(const QString &arg1);
+
+    void on_pushButton_8_clicked();
+
+
+
+    void on_comboBox_5_currentIndexChanged(int index);
+
 private:
     Ui::Widget *ui;
     Form form;

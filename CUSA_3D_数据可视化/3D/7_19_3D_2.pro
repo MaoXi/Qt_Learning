@@ -1,14 +1,14 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-07-10T15:13:15
+# Project created by QtCreator 2018-07-19T18:59:20
 #
 #-------------------------------------------------
 
 QT       += core gui
-
+QT      +=datavisualization
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = 7_10_tab
+TARGET = 7_19_3D_2
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -24,16 +24,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        widget.cpp \
-    form.cpp \
-    juzhen.cpp \
-    test.cpp
+        widget.cpp
 
-HEADERS  += widget.h \
-    form.h \
-    juzhen.h \
-    test.h
+HEADERS  += widget.h
 
-FORMS    += widget.ui \
-    form.ui \
-    juzhen.ui
+FORMS    += widget.ui

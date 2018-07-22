@@ -5,6 +5,7 @@
 
 extern double global;
 extern double h[20][20];
+extern QString name[20][20];
 QGridLayout *mainLayout= new QGridLayout;
 QPushButton *tl[100];
 Juzhen::Juzhen(QWidget *parent) : QWidget(parent)
@@ -51,7 +52,7 @@ void Juzhen::showme()
          tl[j]=new QPushButton;   //(ui->groupBox);
          tl[j]->setMaximumSize(700/a,700/a);
         // tl[j]->setText(QString::number(i*a+1+j));
-         tl[j]->setToolTip(QString::number(i+1)+u8"行"+QString::number(j+1)+u8"列");
+         tl[j]->setToolTip(QString::number(i+1)+u8"行"+QString::number(j+1)+u8"列"+"\n"+name[i][j]);
          if(i==j)
             {
 
