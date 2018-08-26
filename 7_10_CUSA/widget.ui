@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>750</width>
+    <width>850</width>
     <height>600</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>750</width>
+     <width>850</width>
      <height>601</height>
     </rect>
    </property>
@@ -29,7 +29,7 @@
     </font>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>5</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -604,9 +604,12 @@
       <rect>
        <x>370</x>
        <y>120</y>
-       <width>46</width>
+       <width>71</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="maximum">
+      <number>1000</number>
      </property>
     </widget>
    </widget>
@@ -614,7 +617,7 @@
     <attribute name="title">
      <string>统计结果</string>
     </attribute>
-    <widget class="QGroupBox" name="groupBox_3">
+    <widget class="QCustomPlot" name="qCustomPlot" native="true">
      <property name="geometry">
       <rect>
        <x>340</x>
@@ -623,14 +626,11 @@
        <height>330</height>
       </rect>
      </property>
-     <property name="title">
-      <string>概率密度统计曲线</string>
-     </property>
     </widget>
     <widget class="QComboBox" name="comboBox_5">
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>80</x>
        <y>70</y>
        <width>91</width>
        <height>22</height>
@@ -640,10 +640,10 @@
     <widget class="QLineEdit" name="lineEdit_6">
      <property name="geometry">
       <rect>
-       <x>350</x>
+       <x>290</x>
        <y>50</y>
-       <width>71</width>
-       <height>21</height>
+       <width>100</width>
+       <height>25</height>
       </rect>
      </property>
      <property name="readOnly">
@@ -653,10 +653,10 @@
     <widget class="QLineEdit" name="lineEdit_7">
      <property name="geometry">
       <rect>
-       <x>450</x>
+       <x>420</x>
        <y>50</y>
-       <width>71</width>
-       <height>21</height>
+       <width>100</width>
+       <height>25</height>
       </rect>
      </property>
      <property name="readOnly">
@@ -668,8 +668,8 @@
       <rect>
        <x>550</x>
        <y>50</y>
-       <width>71</width>
-       <height>21</height>
+       <width>100</width>
+       <height>25</height>
       </rect>
      </property>
      <property name="readOnly">
@@ -679,10 +679,10 @@
     <widget class="QLineEdit" name="lineEdit_9">
      <property name="geometry">
       <rect>
-       <x>350</x>
+       <x>290</x>
        <y>90</y>
-       <width>71</width>
-       <height>21</height>
+       <width>100</width>
+       <height>25</height>
       </rect>
      </property>
      <property name="readOnly">
@@ -692,10 +692,10 @@
     <widget class="QLineEdit" name="lineEdit_10">
      <property name="geometry">
       <rect>
-       <x>450</x>
+       <x>420</x>
        <y>90</y>
-       <width>71</width>
-       <height>21</height>
+       <width>100</width>
+       <height>25</height>
       </rect>
      </property>
      <property name="readOnly">
@@ -707,8 +707,8 @@
       <rect>
        <x>550</x>
        <y>90</y>
-       <width>71</width>
-       <height>21</height>
+       <width>100</width>
+       <height>25</height>
       </rect>
      </property>
      <property name="readOnly">
@@ -718,7 +718,7 @@
     <widget class="QLabel" name="label_12">
      <property name="geometry">
       <rect>
-       <x>350</x>
+       <x>300</x>
        <y>20</y>
        <width>72</width>
        <height>15</height>
@@ -731,9 +731,9 @@
     <widget class="QLabel" name="label_13">
      <property name="geometry">
       <rect>
-       <x>460</x>
+       <x>430</x>
        <y>20</y>
-       <width>72</width>
+       <width>70</width>
        <height>15</height>
       </rect>
      </property>
@@ -744,7 +744,7 @@
     <widget class="QLabel" name="label_14">
      <property name="geometry">
       <rect>
-       <x>560</x>
+       <x>570</x>
        <y>20</y>
        <width>72</width>
        <height>15</height>
@@ -757,10 +757,10 @@
     <widget class="QLabel" name="label_15">
      <property name="geometry">
       <rect>
-       <x>260</x>
+       <x>220</x>
        <y>50</y>
        <width>72</width>
-       <height>15</height>
+       <height>25</height>
       </rect>
      </property>
      <property name="text">
@@ -770,10 +770,10 @@
     <widget class="QLabel" name="label_16">
      <property name="geometry">
       <rect>
-       <x>260</x>
+       <x>210</x>
        <y>90</y>
        <width>72</width>
-       <height>15</height>
+       <height>25</height>
       </rect>
      </property>
      <property name="text">
@@ -862,7 +862,7 @@
     <widget class="QLabel" name="label_19">
      <property name="geometry">
       <rect>
-       <x>35</x>
+       <x>20</x>
        <y>70</y>
        <width>41</width>
        <height>21</height>
@@ -906,10 +906,10 @@
     <widget class="QTabWidget" name="tabWidget_2">
      <property name="geometry">
       <rect>
-       <x>34</x>
-       <y>70</y>
-       <width>541</width>
-       <height>431</height>
+       <x>24</x>
+       <y>30</y>
+       <width>561</width>
+       <height>471</height>
       </rect>
      </property>
      <property name="currentIndex">
@@ -919,36 +919,62 @@
       <attribute name="title">
        <string>输入样本相关系数矩阵</string>
       </attribute>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>551</width>
+         <height>431</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="tab_7">
       <attribute name="title">
        <string>相关系数矩阵</string>
       </attribute>
+      <widget class="QGroupBox" name="groupBox_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>551</width>
+         <height>441</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="tab_8">
       <attribute name="title">
        <string>相关系数差值矩阵</string>
       </attribute>
+      <widget class="QGroupBox" name="groupBox_5">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>551</width>
+         <height>441</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+      </widget>
      </widget>
-    </widget>
-    <widget class="QPushButton" name="pushButton_12">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>500</y>
-       <width>93</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>保存</string>
-     </property>
     </widget>
     <widget class="QPushButton" name="pushButton_13">
      <property name="geometry">
       <rect>
        <x>620</x>
-       <y>240</y>
+       <y>140</y>
        <width>100</width>
        <height>40</height>
       </rect>
@@ -961,7 +987,7 @@
      <property name="geometry">
       <rect>
        <x>620</x>
-       <y>370</y>
+       <y>280</y>
        <width>100</width>
        <height>40</height>
       </rect>
@@ -970,10 +996,140 @@
       <string>开始计算</string>
      </property>
     </widget>
+    <widget class="QSlider" name="horizontalSlider">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>520</y>
+       <width>160</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_2">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>520</y>
+       <width>160</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_16">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>500</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>保存图片</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_9">
+    <attribute name="title">
+     <string>输入文件选择</string>
+    </attribute>
+    <widget class="QPushButton" name="pushButton_12">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>480</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>开始计算</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="listWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>130</y>
+       <width>211</width>
+       <height>271</height>
+      </rect>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_15">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>180</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>》》</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_17">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>30</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>show</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="listWidget">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>130</y>
+       <width>241</width>
+       <height>271</height>
+      </rect>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_18">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>290</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>《《</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header location="global">qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

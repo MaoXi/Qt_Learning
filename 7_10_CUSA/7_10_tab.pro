@@ -5,7 +5,8 @@
 #-------------------------------------------------
 
 QT       += core gui
-
+QT       +=printsupport
+QT      +=datavisualization
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = 7_10_tab
@@ -27,12 +28,20 @@ SOURCES += main.cpp\
         widget.cpp \
     form.cpp \
     juzhen.cpp \
-    test.cpp
+    interface3.cpp \
+    mams.cpp \
+    k_s.cpp \
+    cpd.cpp \
+    qcustomplot.cpp
 
 HEADERS  += widget.h \
     form.h \
     juzhen.h \
-    test.h
+    interface3.h \
+    mams.h \
+    k_s.h \
+    qcustomplot.h \
+    cpd.h
 
 FORMS    += widget.ui \
     form.ui \

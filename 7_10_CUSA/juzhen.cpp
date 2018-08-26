@@ -3,12 +3,14 @@
 #include"QPushButton"
 #include"QLayoutItem"
 
-extern double global;
-extern double h[20][20];
-extern QString name[20][20];
+extern int global;
+extern double **h;
+extern QString *name[1000];
 QGridLayout *mainLayout= new QGridLayout;
 QPushButton *tl[100];
-Juzhen::Juzhen(QWidget *parent) : QWidget(parent)
+Juzhen::Juzhen(QWidget *parent):
+    QWidget(parent),
+     ui(new Ui::Juzhen)
 
 {
     ui->setupUi(this);

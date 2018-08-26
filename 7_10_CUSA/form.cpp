@@ -1,8 +1,9 @@
 ﻿#include"form.h"
 #include"QFileDialog"
-Form::Form(QWidget *parent) : QWidget(parent)
-
-{
+Form::Form(QWidget *parent):
+    QWidget(parent),
+ ui(new Ui::Form)
+{ 
     ui->setupUi(this);
 }
 
