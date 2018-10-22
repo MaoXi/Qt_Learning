@@ -6,6 +6,7 @@
 #include "highgui.h"
 #include <QTime>
 #include<opencv.hpp>
+#include<QPixmap>
 using namespace cv;
 
 namespace Ui {
@@ -30,6 +31,10 @@ private slots:
     void on_pushButton_3_clicked();
      void nextFrame();
 
+ //    void on_pushButton_4_clicked();
+
+     void on_horizontalSlider_valueChanged(int value);
+
 private:
     Ui::MainWindow *ui;
     cv::Mat frame;
@@ -38,6 +43,7 @@ private:
         QTimer *timer;
         double rate; //FPS
         cv::VideoWriter writer;   //make a video record
+        QPixmap *pPixmap;
 
 };
 

@@ -7,11 +7,17 @@
 #include"cv.h"
 #include<QTimer>
 #include<QDebug>
+#include<QPixmap>
 
 
 using namespace cv;
 using namespace std;
 
+//本地图片定义
+Mat localimage;
+//cv::cvtColor(localimage,localimage,CV_BGR2RGB);
+QImage localimg;
+QString fileName;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -86,7 +92,7 @@ void MainWindow::nextFrame()
    }
 }
 
-void MainWindow::on_pushButton_5_clicked()   //打开相机  参考：https://www.cnblogs.com/annt/p/ant003.html#3872827
+void MainWindow::on_pushButton_5_clicked()                      //打开相机  参考：https://www.cnblogs.com/annt/p/ant003.html#3872827
 {
     if(capture.isOpened())
         capture.release();
@@ -107,7 +113,7 @@ void MainWindow::on_pushButton_5_clicked()   //打开相机  参考：https://ww
             ui->graphicsView->show();
 
             timer = new QTimer(this);
-            timer->setInterval(50);   //set timer match with FPS
+            timer->setInterval(50);                                         //set timer match with FPS
             connect(timer, SIGNAL(timeout()), this, SLOT(nextFrame()));
             timer->start();
           }
@@ -117,17 +123,20 @@ void MainWindow::on_pushButton_5_clicked()   //打开相机  参考：https://ww
 }
 
 
-void MainWindow::on_pushButton_3_clicked()   //打开本地图片
+void MainWindow::on_pushButton_3_clicked()     //打开本地图片                                //打开本地图片
 {
-    QString fileName = QFileDialog::getOpenFileName(this,tr("Open Image"),".",tr("Image File(*.png *.jpg *.jpeg *.bmp)"));
-    Mat image = cv::imread(fileName.toLatin1().data());
-    cv::cvtColor(image,image,CV_BGR2RGB);
-    QImage img = QImage((const unsigned char*)(image.data),image.cols,image.rows,QImage::Format_RGB888);
-    ui->graphicsView->resize(img.width(), img.height());
-    ui->graphicsView_2->resize(img.width(), img.height());
+    if(capture.isOpened())                                                //判断摄像头是否打开，若打开，则先关闭，否则会崩溃
+        capture.release();
+
+    fileName = QFileDialog::getOpenFileName(this,tr("Open Image"),".",tr("Image File(*.png *.jpg *.jpeg *.bmp)"));
+    localimage = cv::imread(fileName.toLatin1().data());
+    cv::cvtColor(localimage,localimage,CV_BGR2RGB);
+    localimg = QImage((const unsigned char*)(localimage.data),localimage.cols,localimage.rows,QImage::Format_RGB888);
+    ui->graphicsView->resize(localimg.width(), localimg.height());
+    ui->graphicsView_2->resize(localimg.width(), localimg.height());
     QGraphicsScene *scene = new QGraphicsScene;
         //scene->setSceneRect(0,0,img.width(),img.height());
-    scene->addPixmap(QPixmap::fromImage(img));
+    scene->addPixmap(QPixmap::fromImage(localimg));
     ui->graphicsView->setScene(scene);
     ui->graphicsView_2->setScene(scene);
     ui->graphicsView->adjustSize();
@@ -136,5 +145,57 @@ void MainWindow::on_pushButton_3_clicked()   //打开本地图片
     ui->graphicsView_2->show();
 }
 
+//void MainWindow::on_pushButton_4_clicked()   //亮度
+//{
+//    pPixmap=new QPixmap(fileName);
+//    QImage  image=pPixmap->toImage();
+//    unsigned char *pData=image.bits();
 
+//        int width=image.width();
+//        int height=image.height();
 
+//        for(int i=0;i<height;i++)
+//        {
+//               for(int j=0;j<width;j++)
+//               {
+//                    *(pData+(i*width+j)*4)=150;      //B
+//                    *(pData+(i*width+j)*4+1)=150;    //G
+//                    *(pData+(i*width+j)*4+2)=150;    //R
+//               }
+//        }
+//     QPixmap ConvertPixmap=QPixmap::fromImage(image);
+//     QGraphicsScene *scene = new QGraphicsScene;
+//     //scene->setSceneRect(0,0,img.width(),img.height());
+//     scene->addPixmap(ConvertPixmap);
+
+//     ui->graphicsView_2->setScene(scene);
+//     ui->graphicsView_2->adjustSize();
+//     ui->graphicsView_2->show();
+//}
+
+void MainWindow::on_horizontalSlider_valueChanged(int value)
+{
+    pPixmap=new QPixmap(fileName);
+    QImage  image=pPixmap->toImage();
+       unsigned char *pData=image.bits();
+
+       int width=image.width();
+       int height=image.height();
+
+       for(int i=0;i<height;i++)
+       {
+              for(int j=0;j<width;j++)
+              {
+                   *(pData+(i*width+j)*4)=(*(pData+(i*width+j)*4)*value*3/255);
+                   *(pData+(i*width+j)*4+1)=(*(pData+(i*width+j)*4+1)*value*3/255);
+                   *(pData+(i*width+j)*4+2)=(*(pData+(i*width+j)*4+2)*value*3/255);
+              }
+       }
+       QPixmap ConvertPixmap=QPixmap::fromImage(image);
+       QGraphicsScene *scene = new QGraphicsScene;
+       scene->setSceneRect(0,0,image.width(),image.height());
+       scene->addPixmap(ConvertPixmap);
+       ui->graphicsView_2->setScene(scene);
+      // ui->graphicsView_2->adjustSize();
+       ui->graphicsView_2->show();
+}

@@ -43,3 +43,8 @@ else:unix: LIBS += -L$$PWD/../../program/OpenCV/opencv/build/x64/vc14/lib/ -lope
 
 INCLUDEPATH += $$PWD/../../program/OpenCV/opencv/build/x64/vc14
 DEPENDPATH += $$PWD/../../program/OpenCV/opencv/build/x64/vc14
+
+DISTFILES +=
+
+RESOURCES += \
+    pic.qrc
