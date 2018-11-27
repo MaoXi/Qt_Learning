@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="contextMenuPolicy">
+       <enum>Qt::ActionsContextMenu</enum>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuApplication">
+    <property name="title">
+     <string>Application</string>
+    </property>
+    <addaction name="actionnew"/>
+    <addaction name="actionopen"/>
+    <addaction name="actioninformation"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuKnowlege">
+    <property name="title">
+     <string>Knowlege</string>
+    </property>
+    <addaction name="actionDocumentation"/>
+    <addaction name="actionRelative_Covariance"/>
+    <addaction name="actionDistribution"/>
+   </widget>
+   <widget class="QMenu" name="menuRandom_Design">
+    <property name="title">
+     <string>Random Design</string>
+    </property>
+    <addaction name="actionSimple_Ramdom_Sampling"/>
+    <addaction name="actionLatin_Ramdom_Sampling"/>
+   </widget>
+   <widget class="QMenu" name="menuStatistics">
+    <property name="title">
+     <string>Statistics</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuCalculation">
+    <property name="title">
+     <string>Calculation</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuPlot">
+    <property name="title">
+     <string>Plot</string>
+    </property>
+   </widget>
+   <addaction name="menuApplication"/>
+   <addaction name="menuKnowlege"/>
+   <addaction name="menuRandom_Design"/>
+   <addaction name="menuStatistics"/>
+   <addaction name="menuCalculation"/>
+   <addaction name="menuPlot"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionnew">
+   <property name="text">
+    <string>new</string>
+   </property>
+  </action>
+  <action name="actionopen">
+   <property name="text">
+    <string>open</string>
+   </property>
+  </action>
+  <action name="actioninformation">
+   <property name="text">
+    <string>information</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionDocumentation">
+   <property name="text">
+    <string>Documentation</string>
+   </property>
+  </action>
+  <action name="actionRelative_Covariance">
+   <property name="text">
+    <string>Relative Covariance</string>
+   </property>
+  </action>
+  <action name="actionDistribution">
+   <property name="text">
+    <string>Distribution</string>
+   </property>
+  </action>
+  <action name="actionSimple_Ramdom_Sampling">
+   <property name="text">
+    <string>Simple Ramdom Sampling</string>
+   </property>
+  </action>
+  <action name="actionLatin_Ramdom_Sampling">
+   <property name="text">
+    <string>Latin Ramdom Sampling</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
